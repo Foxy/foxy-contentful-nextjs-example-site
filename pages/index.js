@@ -4,9 +4,13 @@ export default function Home({ featuredProducts }) {
   return (
     <div className="container p-2">
       {featuredProducts.map((product) => (
-        <p key={product.slug}>
+        <a
+          key={product.slug}
+          className="text-blue-500 block"
+          href={`https://${process.env.NEXT_PUBLIC_FOXY_SUBDOMAIN}.foxycart.com/cart?name=${product.name}&price=${product.price}`}
+        >
           {product.name} - ${product.price}
-        </p>
+        </a>
       ))}
     </div>
   );
