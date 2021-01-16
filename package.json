@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
     "autoprefixer": "^10.1.0",
     "axios": "^0.21.1",
     "next": "10.0.4",
