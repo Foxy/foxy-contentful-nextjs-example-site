@@ -73,6 +73,6 @@ export async function getStaticPaths() {
 
   return {
     paths: allProducts?.map(({ slug }) => `/products/${slug}`) ?? [],
-    fallback: true,
+    fallback: false,
   };
 }
