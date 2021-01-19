@@ -29,7 +29,7 @@ export default function Product({ product }) {
 
             <div className="py-5 lg:px-10 lg:py-3">
               <h1 className="text-3xl">{product.name}</h1>
-              <h2 className="text-2xl">${product.price}</h2>
+              <h2 className="text-2xl text-gray-600">${product.price}</h2>
               <div className="my-2 mx-1">
                 {documentToReactComponents(product.description.json)}
               </div>
@@ -38,14 +38,15 @@ export default function Product({ product }) {
                 type="number"
                 min="1"
                 step="1"
+                defaultValue="1"
                 name="quantity"
                 placeholder="Quantity"
-                className="mt-5 mb-3 border border-gray-400 rounded p-2 block"
+                className="mt-5 mb-3 border border-gray-400 rounded py-2 px-3 block"
               />
 
               <button
                 type="submit"
-                className="bg-gray-600 rounded p-2 text-gray-100 cursor-pointer"
+                className="bg-gray-600 rounded py-2 px-6 text-gray-100 cursor-pointer"
               >
                 Add to Cart
               </button>
