@@ -58,12 +58,11 @@ export default function Product({ product }) {
   );
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  const data = await getProductBySlug(params.slug, preview);
+export async function getStaticProps({ params }) {
+  const data = await getProductBySlug(params.slug);
 
   return {
     props: {
-      preview,
       product: data?.product ?? null,
     },
   };
