@@ -10,11 +10,15 @@ export default function Layout({ children }) {
           <a className="mr-5 text-xl font-medium hover:underline">Home</a>
         </Link>
 
+        <Link href="/products">
+          <a className="mr-5 text-xl font-medium hover:underline">Products</a>
+        </Link>
+
         <a
           href="https://lrnxie-store.foxycart.com/cart?cart=view"
           className="mr-5 text-xl font-medium hover:underline cursor-pointer"
         >
-          Cart
+          Cart (<span data-fc-id="minicart-quantity">0</span>)
         </a>
       </nav>
 

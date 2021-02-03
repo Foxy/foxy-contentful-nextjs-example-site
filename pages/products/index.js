@@ -1,17 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { getFeaturedProducts } from "../lib/api";
-import Layout from "../components/layout";
+import { getAllProductsWithSlug } from "../../lib/api";
+import Layout from "../../components/layout";
 
-export default function Home({ featuredProducts }) {
+export default function AllProducts({ allProducts }) {
   return (
     <Layout>
       <div className="px-16 py-10 md:px-24 lg:px-28">
-        <h2 className="text-2xl mb-2">Featured Products</h2>
+        <h2 className="text-2xl mb-2">All Products</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {featuredProducts.map((product) => (
+          {allProducts.map((product) => (
             <div
               key={product.slug}
               className="rounded bg-white border-gray-200 shadow-md hover:shadow-xl flex justify-center flex-col px-2 pt-3 pb-5"
@@ -54,9 +54,9 @@ export default function Home({ featuredProducts }) {
 }
 
 export const getStaticProps = async () => {
-  const featuredProducts = await getFeaturedProducts();
+  const allProducts = await getAllProductsWithSlug();
 
   return {
-    props: { featuredProducts },
+    props: { allProducts },
   };
 };
