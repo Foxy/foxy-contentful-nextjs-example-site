@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         </Link>
 
         <a
-          href="https://lrnxie-store.foxycart.com/cart?cart=view"
+          href={`https://${process.env.NEXT_PUBLIC_FOXY_SUBDOMAIN}.foxycart.com/cart?cart=view`}
           className="mr-5 text-xl font-medium hover:underline cursor-pointer"
         >
           Cart (<span data-fc-id="minicart-quantity">0</span>)

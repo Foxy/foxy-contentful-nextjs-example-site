@@ -25,7 +25,7 @@ Tutorial:
 
 1. Sign up or log in [Contentful](https://be.contentful.com/login), and create a new empty **space** from the [dashboard](https://app.contentful.com/)
 
-2. From the contentful space, go to **Content model** and add a new content type: give it the **Name** `Product`, the **Api Identifier** should be `product`
+2. From the newly created space, go to **Content model** and add a new content type: give it the **Name** `Product`, the **Api Identifier** should be `product`
 
 3. Add these fields and configure all as required fields:
 
