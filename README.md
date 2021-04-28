@@ -2,7 +2,7 @@
 
 Live demo: https://foxy-contentful-nextjs.vercel.app/
 
-Tutorial:
+Step-by-step guide: [Build a JAMstack ecommerce website with Next.js, Contentful and Foxy](https://www.notion.so/Build-a-JAMstack-ecommerce-website-with-Next-js-Contentful-and-Foxy-756df98a4f0c4f5287812295ff6b5097)
 
 ## 🛠 Technologies used
 
@@ -15,13 +15,13 @@ Tutorial:
 
 ## 🚀 Quick start
 
-### Setup Foxy
+### Set up Foxy
 
 1. Sign up or log in your [Foxy](https://admin.foxycart.com/admin) admin account
 
 2. Create a new store or use an existing one. Other settings are optional. The key thing is to have your own Foxy store subdomain.
 
-### Setup Contentful
+### Set up Contentful
 
 1. Sign up or log in [Contentful](https://be.contentful.com/login), and create a new empty **space** from the [dashboard](https://app.contentful.com/)
 
@@ -41,13 +41,15 @@ Tutorial:
 
 ### Get the required environment variables
 
-From your contentful space, go to **Settings > API keys**. There will be an example Content delivery / preview token - you can use these API keys or create a new key.
+From your Contentful space, go to **Settings > API keys**. There will be an example Content delivery / preview token - you can use these API keys or create a new key.
 
 - `CONTENTFUL_SPACE_ID` should be the **Space ID** field of your API Key
 
 - `CONTENTFUL_ACCESS_TOKEN` should be the **[Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) - access token** field of your API key
 
-- `NEXT_PUBLIC_FOXY_SUBDOMAIN` should be the Foxy store subdomain. For exmaple, if your store domain is `foxy-demo.foxycart.com`, the subdomain would be `foxy-demo`
+- `NEXT_PUBLIC_FOXY_SUBDOMAIN` should be the Foxy store subdomain, which can be found in the Foxy admin [Dashboard](https://admin.foxycart.com/admin.php). For exmaple, if your store domain is `foxy-demo.foxycart.com`, the subdomain would be `foxy-demo`
+
+- `FOXY_STORE_SECRET` is required only if you want to enable [Foxy HMAC cart validation](https://wiki.foxycart.com/v/2.0/hmac_validation). To get this variable value, go to [Advanced Settings](https://admin.foxycart.com/admin.php?ThisAction=EditAdvancedFeatures) in the Foxy admin. Look for the "store secret" setting, click the "Show" button, and copy the value in the text box. Also, you need to check the "would you like to enable cart validation?" option in the same section
 
 ### Deploy to Vercel with one click
 
@@ -56,7 +58,7 @@ From your contentful space, go to **Settings > API keys**. There will be an exam
 ## 🏗 Want to get your hands dirty?
 
 1. Clone this repo: `git clone https://github.com/lrnxie/foxy-contentful-nextjs`
-2. Copy the `.env.local.example` file in this directory to `.env.local`, and set the [variables](#Get-the-required-environment-variables)
+2. Copy the `.env.example` file to `.env.local`, and set the [variables](#Get-the-required-environment-variables)
 3. Make your changes
 4. Push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new).
 

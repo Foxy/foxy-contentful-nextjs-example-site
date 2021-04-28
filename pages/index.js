@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { getFeaturedProducts } from "../lib/api";
+import { getFoxyLink } from "../lib/foxy-signer";
 
 export default function Home({ featuredProducts }) {
   return (
@@ -28,7 +29,7 @@ export default function Home({ featuredProducts }) {
 
             <div className="mt-4">
               <a
-                href={`https://${process.env.NEXT_PUBLIC_FOXY_SUBDOMAIN}.foxycart.com/cart?name=${product.name}&price=${product.price}&image=${product.image.url}&cart=checkout`}
+                href={product.foxyBuyLink}
                 className="ml-1 bg-gray-600 rounded px-4 py-2 text-gray-100 cursor-pointer"
               >
                 Buy Now
@@ -54,6 +55,13 @@ export const getStaticProps = async () => {
   const featuredProducts = await getFeaturedProducts();
 
   return {
-    props: { featuredProducts },
+    props: {
+      featuredProducts: featuredProducts.map((product) => {
+        return {
+          ...product,
+          foxyBuyLink: getFoxyLink(product),
+        };
+      }),
+    },
   };
 };
