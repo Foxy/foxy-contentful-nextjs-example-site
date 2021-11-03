@@ -2,7 +2,7 @@
 
 Live demo: https://foxy-contentful-nextjs.vercel.app/
 
-Step-by-step guide: [Build a JAMstack ecommerce website with Next.js, Contentful and Foxy](https://www.notion.so/Build-a-JAMstack-ecommerce-website-with-Next-js-Contentful-and-Foxy-756df98a4f0c4f5287812295ff6b5097)
+Step-by-step guide: [Build a JAMstack Ecommerce Website with Next.js, Contentful, and Foxy](https://www.foxy.io/blog/build-a-jamstack-ecommerce-website-with-next-js-contentful-and-foxy/)
 
 ## 🛠 Technologies used
 
